@@ -1,6 +1,6 @@
 <style type="text/css">
 	pre{
-		font-size:1.8rem;
+		font-size:1.5rem;
 		background-color: #252525;
 		color:yellow;
 		padding: 10px 10px 10px 10px;

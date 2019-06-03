@@ -18,5 +18,7 @@ beautyOutput($list,'List Of Elements');
 </form>
 
 <?php
+beautyOutput($element,'Searching');
+
 $result = linearSearch($list,$element);
 beautyOutput($result,'Result');
