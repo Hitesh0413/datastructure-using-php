@@ -1,4 +1,4 @@
-# datastructure using php
+# Data Structure Using PHP
 
 ```php
 /*HELPER FUNCTIONS ARE WRITTEN HERE*/
