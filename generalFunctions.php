@@ -1,9 +1,9 @@
 <style type="text/css">
 	pre{
-		font-size:1.5rem;
+		font-size:1rem;
 		background-color: #252525;
 		color:yellow;
-		padding: 10px 10px 10px 10px;
+		padding: 20px 10px 10px 20px;
 	}
 </style>
 
