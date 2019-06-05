@@ -34,3 +34,21 @@ function binarySearch($list=array(),$element){
 	return $result ;
 
 }
+
+function bubbleSort($list=array()){
+	$temp=0;
+	for($i=0;$i<count($list);$i++){
+
+		for($j=0;$j<(count($list)-$i-1);$j++){
+
+			if($list[$j]>$list[$j+1]){
+				$temp=$list[$j];
+				$list[$j]=$list[$j+1];
+				$list[$j+1]=$temp;
+			}
+
+		}
+
+	}
+	return $list;
+}
