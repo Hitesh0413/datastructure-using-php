@@ -42,13 +42,25 @@ function bubbleSort($list=array()){
 		for($j=0;$j<(count($list)-$i-1);$j++){
 
 			if($list[$j]>$list[$j+1]){
-				$temp=$list[$j];
-				$list[$j]=$list[$j+1];
-				$list[$j+1]=$temp;
+				$list=swap($list,$j,($j+1));
 			}
 
 		}
 
+	}
+	return $list;
+}
+
+function selectionSort($list=array()){
+	for ($i=0; $i < count($list) ; $i++) { 
+		$minIndex=$i;
+		for ($j=0; $j < count($list); $j++) { 
+			if($list[$minIndex]<$list[$j]){
+				$minIndex=$j;
+				$list=swap($list,$minIndex,$i);
+			}
+
+		}
 	}
 	return $list;
 }
