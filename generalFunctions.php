@@ -13,3 +13,10 @@ function beautyOutput($data,$title=''){
 	print_r($data);
 	echo "<br>---END---</pre>";
 }
+
+function swap($array=array(),$indexFirst,$indexSecond){
+	$temp=$array[$indexFirst];
+	$array[$indexFirst]=$array[$indexSecond];
+	$array[$indexSecond]=$temp;
+	return $array;
+}
