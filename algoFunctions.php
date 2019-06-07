@@ -64,3 +64,20 @@ function selectionSort($list=array()){
 	}
 	return $list;
 }
+
+function insertionSort($list=array()){
+	$key=0;
+	$j=0;
+	for ($i=1; $i <count($list) ; $i++) { 
+		$key=$list[$i];
+		$j=$i-1;
+
+		while($j>=0 && $list[$j]>$key){
+			$list[$j+1]=$list[$j];
+			$j-=1;
+		}
+		$list[$j+1]=$key;
+
+	}
+	return $list;
+}
