@@ -81,3 +81,40 @@ function insertionSort($list=array()){
 	}
 	return $list;
 }
+
+function mergeSort($list=array()){
+	if(count($list) == 1 ) return $list;
+
+	$middle = count($list) / 2;
+	$front = array_slice($list, 0, $middle);
+	$rear = array_slice($list, $middle);
+
+	$front=mergeSort($front);
+	$rear=mergeSort($rear);
+	return merge($front,$rear);
+}
+
+function merge($front=array(),$rear=array()){
+	$merged=array();
+	while(count($front)>0 && count($rear)>0){
+		if($front[0]>$rear[0]){
+			$merged[]=$rear[0];
+			$rear=array_slice($rear, 1);
+		}
+		else{
+			$merged[]=$front[0];
+			$front=array_slice($front, 1);
+		}
+	}
+	while(count($front)>0){
+		$merged[]=$front[0];
+		$front=array_slice($front, 1);
+	}
+
+	while(count($rear)>0){
+		$merged[]=$rear[0];
+		$rear=array_slice($rear, 1);
+	}
+
+	return $merged;
+}
