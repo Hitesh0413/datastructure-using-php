@@ -118,3 +118,19 @@ function merge($front=array(),$rear=array()){
 
 	return $merged;
 }
+
+
+function quickSort($list=array()){
+	if(count($list)==1) return $list;
+
+	$pivot=$list[count($list)-1];
+	$i=-1;
+	while($i<=count($list)) {
+		if($pivot>=$list[$i]){
+			$i++;
+			$list=swap($list,$i,$j);
+			
+		}
+	}
+	swap($list,($i+1),$j);
+}
